@@ -1,0 +1,18 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "altea": {
+      "party": {
+        ".read": true,
+        ".write": true,
+        ".validate": "newData.val() == null || (newData.hasChildren(['x','y','z','updatedAt']) && newData.child('x').isNumber() && newData.child('x').val() >= -1.1 && newData.child('x').val() <= 1.1 && newData.child('y').isNumber() && newData.child('y').val() >= -1.1 && newData.child('y').val() <= 1.1 && newData.child('z').isNumber() && newData.child('z').val() >= -1.1 && newData.child('z').val() <= 1.1)"
+      },
+      "ping": {
+        ".read": true,
+        ".write": true,
+        ".validate": "newData.val() == null || (newData.hasChildren(['x','y','z','id','at']) && newData.child('x').isNumber() && newData.child('x').val() >= -1.1 && newData.child('x').val() <= 1.1 && newData.child('y').isNumber() && newData.child('y').val() >= -1.1 && newData.child('y').val() <= 1.1 && newData.child('z').isNumber() && newData.child('z').val() >= -1.1 && newData.child('z').val() <= 1.1 && newData.child('id').isString())"
+      }
+    }
+  }
+}

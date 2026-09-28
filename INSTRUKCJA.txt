@@ -1,15 +1,29 @@
-ALTEA GLOBUS — PRZEŁĄCZANE MAPY
+ALTEA GLOBUS — WSPÓLNY ZNACZNIK DRUŻYNY + PING
 
-Wgraj do głównego katalogu repozytorium altea-globus:
+NOWE PLIKI DO REPO:
+1. Podmień index.html
+2. Dodaj realtime-config.js
 
-index.html
-altea_miasta.png
-altea_stany_wyspy.png
-altea_dystrykty.png
-altea_kontynenty.png
+Mapy zostają bez zmian.
 
-Przyciski na stronie:
-[Miasta] [Stany i Wyspy] [Dystrykty] [Kontynenty]
+FIREBASE — konfiguracja:
+1. Utwórz darmowy projekt na https://console.firebase.google.com/
+2. Wejdź w Build -> Realtime Database.
+3. Utwórz bazę.
+4. Skopiuj jej URL, np.:
+   https://twoj-projekt-default-rtdb.europe-west1.firebasedatabase.app
+5. Otwórz realtime-config.js i zamień:
+   WSTAW_TUTAJ_URL_BAZY
+   na swój adres.
+6. W Realtime Database -> Rules wklej zawartość firebase-rules.json i opublikuj reguły.
 
-Domyślnie uruchamia się mapa „Miasta”.
-Po wgraniu plików poczekaj na zakończenie GitHub Pages deployment i odśwież stronę przez Ctrl+F5.
+DZIAŁANIE:
+- „Ustaw drużynę” -> następne kliknięcie globusa zapisuje pozycję dla wszystkich.
+- Można ustawić ją ponownie w dowolnym momencie.
+- „Usuń znacznik” usuwa go wszystkim.
+- „Ping” -> następne kliknięcie globusa wysyła wszystkim pulsujący ping na 3 sekundy.
+- Każdy użytkownik strony może przesuwać znacznik i wysyłać pingi.
+
+UWAGA:
+To jest celowo wspólny, publiczny dostęp. Każdy, kto ma dostęp do strony i zna endpoint,
+może zmieniać te dwa pola. Nie przechowuj w tej bazie żadnych prywatnych danych.
