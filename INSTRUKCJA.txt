@@ -1,0 +1,15 @@
+ALTEA GLOBUS — PRZEŁĄCZANE MAPY
+
+Wgraj do głównego katalogu repozytorium altea-globus:
+
+index.html
+altea_miasta.png
+altea_stany_wyspy.png
+altea_dystrykty.png
+altea_kontynenty.png
+
+Przyciski na stronie:
+[Miasta] [Stany i Wyspy] [Dystrykty] [Kontynenty]
+
+Domyślnie uruchamia się mapa „Miasta”.
+Po wgraniu plików poczekaj na zakończenie GitHub Pages deployment i odśwież stronę przez Ctrl+F5.
